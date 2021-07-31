@@ -62,7 +62,7 @@ static PyObject* test_image_processing_OCV(PyObject* self, PyObject* args) {
         return nullptr;
     }
 
-    shape = PyArray_SHAPE(input_image);
+    npy_intp* shape = PyArray_SHAPE(input_image);
 
     char* in_buf = static_cast<char*>(PyArray_DATA(input_image));          // PyArray_DATA() will return void*
 
