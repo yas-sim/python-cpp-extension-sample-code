@@ -10,7 +10,7 @@
 
 #include <opencv2/opencv.hpp>
 
-extern "C";
+extern "C" {
 
 // Simple addition test function (return = in1 + in2)
 static PyObject* test_func(PyObject* self, PyObject* args) {
@@ -142,3 +142,5 @@ PyMODINIT_FUNC PyInit_python_cpp_module(void) {
     }
     return PyModule_Create(&test_module);
 }
+
+} // extern "C"
